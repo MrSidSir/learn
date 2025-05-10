@@ -1,10 +1,18 @@
-const {getUser , postuserdata} = require('../controller/userController');
 const express = require('express');
-const userRouter = express.Router();
+const router = express.Router();
 
+// Import the controller function
+const { postUser } = require('../controller/userController');
 
-userRouter.get("/userlist", getUser)
-userRouter.post("/userpost" , postuserdata)
- 
+// Route using the controller
+router.post('/', postUser);
 
- module.exports = userRouter;
+router.post('/login', (req, res) => {
+    res.send('This is Sid Sir login from userRoute.js');
+});
+
+router.post('/motivate', (req, res) => {
+    res.send('Believe in yourself. You got this!');
+});
+
+module.exports = router;
