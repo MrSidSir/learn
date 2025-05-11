@@ -5,14 +5,14 @@ const router = express.Router();
 const { postUser } = require('../controller/userController');
 
 // Route using the controller
-router.post('/', postUser);
+router.post('/create_user', postUser);
 
-router.post('/login', (req, res) => {
-    res.send('This is Sid Sir login from userRoute.js');
-});
 
-router.post('/motivate', (req, res) => {
-    res.send('Believe in yourself. You got this!');
-});
 
 module.exports = router;
+
+
+// ADCwpmmxAj4Tsiw2
+// irshad1554
+
+// mongodb+srv://irshad1554:ADCwpmmxAj4Tsiw2@demo.7gpmrfs.mongodb.net/?retryWrites=true&w=majority&appName=demo
